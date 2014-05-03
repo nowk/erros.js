@@ -97,7 +97,6 @@ exports.fouro4 = function() {
  */
 
 function erroris() {
-  var self = this;
   var status = this.status;
 
   if ('undefined' === typeof status) {
