@@ -14,13 +14,9 @@ var statuscodes = require("http").STATUS_CODES;
 
 exports.handler = function(options) {
   return function(err, req, res, next) {
-    if ('undefined' === typeof options) {
-      options = {};
-    }
-
+    options = options || {};
     var viewpath = options.views || './';
     var viewext = options.view_ext || 'jade';
-
     var error = {
       status: options.default_status || 500,
       message: statuscodes[this.status]
